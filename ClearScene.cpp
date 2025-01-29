@@ -6,7 +6,7 @@ void ClearScene::Update/*更新処理*/(char* keys, char* preKeys) {
 	//スペースキーを押した瞬間
 	if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == false) {
 		//シーンをTITLEに切り替える
-		sceneNo = TITLE/*enum SceneのTITLE*/;
+		sceneNo = TITLE;/*enum SceneのTITLE*/
 	}
 }
 
