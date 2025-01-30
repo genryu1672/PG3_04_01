@@ -1,17 +1,17 @@
 #include "TitleScene.h"
 
-void Initilize/*初期化処理*/() {}
+void TitleScene::Initialize() {}/*初期化処理*/
 
-void TitleScene::Update/*更新処理*/(char* keys, char* preKeys) {
+void TitleScene::Update(char* keys, char* preKeys) {/*更新処理*/
 
 	//スペースキーを押した瞬間
 	if (keys[DIK_SPACE] && preKeys[DIK_SPACE] == false) {
 		//シーンをSTAGEに切り替える
-		sceneNo =STAGE /*enum SceneのSTAGE*/;
+		sceneNo =Scene::STAGE ;/*enum SceneのSTAGE*/
 	}
 }
 
-void TitleScene/*描画処理*/() {
+void TitleScene::Draw() {/*描画処理*/
 	Novice::ScreenPrintf(0, 0, "Title Scene");
 	Novice::ScreenPrintf(0, 30, "Push Space");
 }
